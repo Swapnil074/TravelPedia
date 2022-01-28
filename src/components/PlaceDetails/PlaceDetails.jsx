@@ -14,65 +14,74 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
 
-export default function PlaceDetails({ places }) {
+export default function PlaceDetails({ place, selected, refProp }) {
   const classes = useStyles();
+  if (selected)
+    refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+
   return (
     <Card elevation={6}>
       <CardMedia
         style={{ height: 350 }}
         image={
-          places.photo
-            ? places.photo.images.large.url
+          place.photo
+            ? place.photo.images.large.url
             : "https://www.digiflynt.com/wp-content/uploads/2021/04/no_img.jpg"
         }
-        title={places.name}
+        title={place.name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5">
-          {places.name}
+          {place.name}
         </Typography>
         <Box display="flex" justifyContent="space-between">
-          <Typography variant="subtitle1">Price</Typography>
-          <Typography variant="subtitle1">{places.price_level}</Typography>
+          <Rating value={Number(place.rating)} readOnly={true} />
+          <Typography variant="subtitle1">
+            out of {place.num_reviews}
+          </Typography>
         </Box>
-        {places?.cuisine?.map(({ name }) => (
+        <Box display="flex" justifyContent="space-between">
+          <Typography variant="subtitle1">Price</Typography>
+          <Typography variant="subtitle1">{place.price_level}</Typography>
+        </Box>
+        {place?.cuisine?.map(({ name }) => (
           <Chip key={name} size="small" label={name} className={classes.chip} />
         ))}
-        {places?.address && (
+        {place?.address && (
           <Typography
             gutterBottom
             variant="subtitle2"
             color="textSecondary"
             className={classes.subtitle}
           >
-            <LocationOnIcon /> {places.address}
+            <LocationOnIcon /> {place.address}
           </Typography>
         )}
-        {places?.phone && (
+        {place?.phone && (
           <Typography
             gutterBottom
             variant="subtitle2"
             color="textSecondary"
             className={classes.spacing}
           >
-            <PhoneIcon /> {places.phone}
+            <PhoneIcon /> {place.phone}
           </Typography>
         )}
         <CardActions>
-          {places?.web_url && (
+          {place?.web_url && (
             <Button
               size="small"
               color="primary"
-              onClick={() => window.open(places.web_url, "_blank")}
+              onClick={() => window.open(place.web_url, "_blank")}
             >
               Trip advisor
             </Button>
           )}
-          {places?.website && (
+          {place?.website && (
             <Button
               size="small"
               color="primary"
-              onClick={() => window.open(places.website, "_blank")}
+              onClick={() => window.open(place.website, "_blank")}
             >
               Website
             </Button>
