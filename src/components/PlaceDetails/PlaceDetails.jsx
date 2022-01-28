@@ -41,13 +41,43 @@ export default function PlaceDetails({ places }) {
         {places?.address && (
           <Typography
             gutterBottom
-            variant="subtitle"
+            variant="subtitle2"
             color="textSecondary"
             className={classes.subtitle}
           >
             <LocationOnIcon /> {places.address}
           </Typography>
         )}
+        {places?.phone && (
+          <Typography
+            gutterBottom
+            variant="subtitle2"
+            color="textSecondary"
+            className={classes.spacing}
+          >
+            <PhoneIcon /> {places.phone}
+          </Typography>
+        )}
+        <CardActions>
+          {places?.web_url && (
+            <Button
+              size="small"
+              color="primary"
+              onClick={() => window.open(places.web_url, "_blank")}
+            >
+              Trip advisor
+            </Button>
+          )}
+          {places?.website && (
+            <Button
+              size="small"
+              color="primary"
+              onClick={() => window.open(places.website, "_blank")}
+            >
+              Website
+            </Button>
+          )}
+        </CardActions>
       </CardContent>
     </Card>
   );
