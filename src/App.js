@@ -9,13 +9,23 @@ import PlaceDetails from "./components/PlaceDetails/PlaceDetails";
 
 export default function App() {
   const [places, setPlaces] = useState([]);
+  const [coordinates, setCoordinates] = useState({});
+  const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
-    getPlacesData().then((data) => {
+    navigator.geolocation.getCurrentPosition(
+      //set the coordinates to the current location
+      ({ coords: { latitude, longitude } }) =>
+        setCoordinates({ lat: latitude, lng: longitude })
+    );
+  }, []);
+
+  useEffect(() => {
+    getPlacesData(bounds.sw, bounds.ne).then((data) => {
       console.log(data);
       setPlaces(data);
     });
-  }, []);
+  }, [coordinates, bounds]);
 
   return (
     <>
@@ -26,7 +36,11 @@ export default function App() {
           <List />
         </Grid>
         <Grid item xs={12} md={8}>
-          <Map />
+          <Map
+            setCoordinates={setCoordinates}
+            coordinates={coordinates}
+            setBounds={setBounds}
+          />
         </Grid>
       </Grid>
     </>
