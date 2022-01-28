@@ -11,10 +11,15 @@ import {
 import useStyles from "./styles";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-export default function List({ places, childClicked, isLoading }) {
+export default function List({
+  places,
+  childClicked,
+  isLoading,
+  rating,
+  setRating,
+}) {
   const classes = useStyles();
   const [type, setType] = useState("restaurants");
-  const [rating, setRating] = useState("");
   const [elRefs, setElRefs] = useState([]);
 
   useEffect(() => {
@@ -49,7 +54,7 @@ export default function List({ places, childClicked, isLoading }) {
             <Select value={rating} onChange={(e) => setRating(e.target.value)}>
               <MenuItem value={0}>All</MenuItem>
               <MenuItem value={3}>3.0+</MenuItem>
-              <MenuItem value={3}>3.0+</MenuItem>
+              <MenuItem value={4}>4.0+</MenuItem>
               <MenuItem value={4.5}>4.5+</MenuItem>
             </Select>
           </FormControl>
