@@ -11,16 +11,7 @@ import {
 import useStyles from "./styles";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
 
-const places = [
-  { name: "place1" },
-  { name: "place2" },
-  { name: "place3" },
-  { name: "place4" },
-  { name: "place5" },
-  { name: "place6" },
-];
-
-export default function List() {
+export default function List({ places }) {
   const classes = useStyles();
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
@@ -49,7 +40,7 @@ export default function List() {
       <Grid container spacing={3} className={classes.list}>
         {places?.map((place, i) => (
           <Grid item xs={12} key={i}>
-            <PlaceDetails place={place} />
+            <PlaceDetails places={place} />
           </Grid>
         ))}
       </Grid>

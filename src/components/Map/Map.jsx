@@ -17,10 +17,10 @@ export default function Map({ coordinates, setCoordinates, setBounds }) {
         center={coordinates}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
-        options={""}
+        // options={""}
         onChange={(e) => {
-          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw }); //set bounds to topright and bottom left corners
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
+          setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw }); //set bounds to topright and bottom left corners
         }}
         onChildClick={""}
       ></GoogleMapReact>
