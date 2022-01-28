@@ -17,9 +17,10 @@ export default function List({
   isLoading,
   rating,
   setRating,
+  setType,
+  type,
 }) {
   const classes = useStyles();
-  const [type, setType] = useState("restaurants");
   const [elRefs, setElRefs] = useState([]);
 
   useEffect(() => {

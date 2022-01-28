@@ -8,17 +8,19 @@ import Map from "./components/Map/Map";
 
 export default function App() {
   const [places, setPlaces] = useState([]);
-  const [coordinates, setCoords] = useState({});
+  const [type, setType] = useState("restaurants");
+
+  const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [rating, setRating] = useState(null);
+  const [rating, setRating] = useState("0");
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
-        setCoords({ lat: latitude, lng: longitude });
+        setCoordinates({ lat: latitude, lng: longitude });
       }
     );
   }, []);
@@ -30,18 +32,20 @@ export default function App() {
   }, [rating]);
 
   useEffect(async () => {
-    setIsLoading(true);
-    getPlacesData(bounds.sw, bounds.ne).then((data) => {
-      setPlaces(data);
-      setFilteredPlaces([]);
-      setIsLoading(false);
-    });
-  }, [bounds]);
+    if (bounds.sw && bounds.ne) {
+      setIsLoading(true);
+      getPlacesData(type, bounds.sw, bounds.ne).then((data) => {
+        setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
+        setFilteredPlaces([]);
+        setIsLoading(false);
+      });
+    }
+  }, [bounds, type]);
 
   return (
     <>
       <CssBaseline />
-      <Header />
+      <Header setCoordinates={setCoordinates} />
       <Grid container spacing={3} style={{ width: "100%" }}>
         <Grid item xs={12} md={4}>
           <List
@@ -50,11 +54,13 @@ export default function App() {
             isLoading={isLoading}
             rating={rating}
             setRating={setRating}
+            setType={setType}
+            type={type}
           />
         </Grid>
         <Grid item xs={12} md={8}>
           <Map
-            setCoordinates={setCoords}
+            setCoordinates={setCoordinates}
             coordinates={coordinates}
             setBounds={setBounds}
             places={filteredPlaces.length ? filteredPlaces : places}
