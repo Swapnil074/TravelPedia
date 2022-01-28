@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function PlaceDetails() {
-  return <h1>PlaceDetails</h1>;
+export default function PlaceDetails({ place }) {
+  return <h1>{place.name}</h1>;
 }
