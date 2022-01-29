@@ -15,7 +15,7 @@ export default function App() {
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [rating, setRating] = useState("0");
+  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
