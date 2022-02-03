@@ -4,6 +4,7 @@ import { Paper, Typography, useMediaQuery } from "@material-ui/core"; // useMedi
 import LocationonOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
+import mapStyles from "./mapStyles";
 
 export default function Map({
   coordinates,
@@ -21,6 +22,11 @@ export default function Map({
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY }}
         defaultCenter={coordinates}
         center={coordinates}
+        options={{
+          disableDefaultUI: true,
+          zoomControl: true,
+          styles: mapStyles,
+        }}
         defaultZoom={14}
         margin={[50, 50, 50, 50]}
         onChange={(e) => {
