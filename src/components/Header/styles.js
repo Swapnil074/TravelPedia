@@ -62,7 +62,7 @@ export default makeStyles((theme) => ({
   },
   category: {
     position: "absolute",
-    left: theme.spacing(140),
+    left: theme.spacing(120),
   },
   button: {
     height: "62px",
@@ -73,7 +73,7 @@ export default makeStyles((theme) => ({
     color: "#000000",
     borderRadius: "15px",
     margin: theme.spacing(0, 2),
-    // boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+    boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     "&:active": {
       backgroundColor: "#000000",
       color: "#FFFFFF",

@@ -37,13 +37,13 @@ export default function Header({ setCoordinates }) {
           </Autocomplete>
         </Box>
         <div className={classes.category}>
-          <Button variant="contained" className={classes.button}>
+          <Button variant="outlined" className={classes.button}>
             restaurant
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button variant="outlined" className={classes.button}>
             hotels
           </Button>
-          <Button variant="contained" className={classes.button}>
+          <Button variant="outlined" className={classes.button}>
             attractions
           </Button>
         </div>
