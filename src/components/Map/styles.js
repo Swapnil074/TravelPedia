@@ -2,16 +2,20 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export default makeStyles(() => ({
   paper: {
-    padding: "10px",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    width: "100px",
+    alignItems: "center",
+    width: "150px",
+    borderRadius: "10px",
+    height: "190px",
+    overflow: "hidden",
   },
   mapContainer: {
     height: "85vh",
     width: "100%",
     margin: "1%",
+    borderRadius: 30,
+    overflow: "hidden",
   },
   markerContainer: {
     position: "absolute",
@@ -21,5 +25,7 @@ export default makeStyles(() => ({
   },
   pointer: {
     cursor: "pointer",
+    width: "100%",
+    alignItems: "center",
   },
 }));

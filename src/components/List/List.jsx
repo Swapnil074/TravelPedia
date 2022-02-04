@@ -103,15 +103,15 @@ export default function List({
         </div>
       ) : (
         <>
+          <Typography
+            variant="h4"
+            style={{
+              fontWeight: "bold",
+            }}
+          >
+            {places.length} results
+          </Typography>
           <Grid container spacing={3} className={classes.list}>
-            <Typography
-              variant="h4"
-              style={{
-                fontWeight: "bold",
-              }}
-            >
-              0 results
-            </Typography>
             {places?.map((place, i) => (
               <Grid ref={elRefs[i]} key={i} item xs={12}>
                 <PlaceDetails

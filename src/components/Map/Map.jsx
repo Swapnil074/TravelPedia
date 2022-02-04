@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-import { Paper, Typography, useMediaQuery } from "@material-ui/core"; // useMediaQuery is a hook that helps us to check if the screen is small or not
+import { Paper, Typography, useMediaQuery, Box } from "@material-ui/core"; // useMediaQuery is a hook that helps us to check if the screen is small or not
 import LocationonOutlinedIcon from "@material-ui/icons/LocationOnOutlined";
 import Rating from "@material-ui/lab/Rating";
 import useStyles from "./styles";
@@ -46,13 +46,6 @@ export default function Map({
               <LocationonOutlinedIcon color="primary" fontSize="large" />
             ) : (
               <Paper elevation={3} className={classes.paper}>
-                <Typography
-                  className={classes.typography}
-                  gutterBottom
-                  variant="subtitle2"
-                >
-                  {place.name}
-                </Typography>
                 <img
                   className={classes.pointer}
                   src={
@@ -60,13 +53,42 @@ export default function Map({
                       ? place.photo.images.large.url
                       : "https://www.digiflynt.com/wp-content/uploads/2021/04/no_img.jpg"
                   }
+                  style={{ height: "100px" }}
                   alt={place.name}
                 />
+                <Box
+                  style={{
+                    alignItems: "center",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    padding: 5,
+                  }}
+                >
+                  <Typography variant="subtitle2" nowrap>
+                    {place.name}
+                  </Typography>
+                </Box>
+
                 <Rating
                   size="small"
                   value={Number(place.rating)}
                   readOnly={true}
                 />
+                <Box
+                  style={{
+                    height: 25,
+                    border: "1px solid #ccc0b3",
+                    width: "80%",
+                    borderRadius: 8,
+                    margin: 10,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <Typography variant="body2">More Details</Typography>
+                </Box>
               </Paper>
             )}
           </div>
