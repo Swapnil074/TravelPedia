@@ -17,12 +17,27 @@ export default makeStyles((theme) => ({
   },
   container: {
     padding: "25px",
+    margin: theme.spacing(0, 2),
+  },
+  filter: {
+    display: "flex",
+    padding: "25px",
+    marginLeft: 0,
+  },
+  button: {
+    backgroundColor: "#FFFFFF",
+    color: "#000000",
+    borderRadius: "15px",
+    margin: theme.spacing(1, 2, 1),
+    fontSize: "18px",
+    flexDirection: "row",
   },
   marginBottom: {
     marginBottom: "30px",
   },
   list: {
     height: "75vh",
+    margin: theme.spacing(1, 0, 0),
     overflow: "auto",
   },
 }));

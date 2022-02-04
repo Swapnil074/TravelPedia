@@ -20,6 +20,7 @@ export default makeStyles((theme) => ({
       width: "auto",
     },
     height: theme.spacing(8.5),
+    grid: 1 / 12,
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
@@ -51,7 +52,7 @@ export default makeStyles((theme) => ({
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create("width"),
     marginLeft: 10,
-    width: "100%",
+    width: "80%",
     height: "100%",
     [theme.breakpoints.up("md")]: { width: "27.5ch" },
   },
@@ -59,10 +60,7 @@ export default makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     minHeight: 90,
-  },
-  category: {
-    position: "absolute",
-    left: theme.spacing(120),
+    flexDirection: "row",
   },
   button: {
     backgroundColor: "#FFFFFF",

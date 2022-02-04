@@ -28,6 +28,7 @@ export default function Header({ setCoordinates }) {
           {...checkbox}
           className={classes.button}
           cursor="pointer"
+          border="0.5px solid #ccc"
           color={checkbox.checked ? "white" : "black"}
           _checked={{
             bg: "#000000",
@@ -58,7 +59,7 @@ export default function Header({ setCoordinates }) {
   return (
     <AppBar position="sticky" style={{ background: "#FFFFFF" }}>
       <Toolbar className={classes.toolbar}>
-        <Box component="flex" sx={{ width: 700 }}>
+        <Box component="flex">
           <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -74,7 +75,7 @@ export default function Header({ setCoordinates }) {
             </div>
           </Autocomplete>
         </Box>
-        <div className={classes.category}>
+        <Box component="flex" marginRight={"20%"}>
           <HStack
             {...group}
             style={{ justifyContent: "center", alignItems: "center" }}
@@ -88,7 +89,7 @@ export default function Header({ setCoordinates }) {
               );
             })}
           </HStack>
-        </div>
+        </Box>
       </Toolbar>
     </AppBar>
   );
