@@ -14,16 +14,16 @@ export default makeStyles((theme) => ({
     "&:hover": { backgroundColor: alpha(theme.palette.common.white, 0.25) },
     marginRight: theme.spacing(5),
     padding: theme.spacing(0, 0, 1),
-    marginLeft: 0,
     width: "100%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(3),
       width: "auto",
     },
-    height: "70px",
+    height: theme.spacing(8.5),
   },
   searchIcon: {
     padding: theme.spacing(0, 2),
+
     height: "100%",
     position: "absolute",
     pointerEvents: "none",
@@ -65,18 +65,17 @@ export default makeStyles((theme) => ({
     left: theme.spacing(120),
   },
   button: {
-    height: "62px",
-    width: "177.45px",
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#FFFFFF",
     color: "#000000",
     borderRadius: "15px",
-    margin: theme.spacing(0, 2),
+    margin: theme.spacing(1, 2, 1),
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-    "&:active": {
-      backgroundColor: "#000000",
-      color: "#FFFFFF",
-    },
+    fontSize: "18px",
+  },
+  grouped: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    margin: theme.spacing(0, 2),
   },
 }));
