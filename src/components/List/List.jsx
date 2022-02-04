@@ -19,8 +19,6 @@ export default function List({
   isLoading,
   rating,
   setRating,
-  setType,
-  type,
 }) {
   const classes = useStyles();
   const [elRefs, setElRefs] = useState([]);

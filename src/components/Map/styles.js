@@ -11,7 +11,7 @@ export default makeStyles(() => ({
     overflow: "hidden",
   },
   mapContainer: {
-    height: "85vh",
+    height: "90vh",
     width: "100%",
     margin: "1%",
     borderRadius: 30,

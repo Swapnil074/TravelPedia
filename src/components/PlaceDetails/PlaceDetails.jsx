@@ -74,7 +74,7 @@ export default function PlaceDetails({ place, selected, refProp }) {
           </Box>
           <Box
             position="relative"
-            top="-40px"
+            top="-20px"
             justifyContent="space-between"
             marginLeft="50%"
           >

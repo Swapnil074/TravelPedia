@@ -6,7 +6,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import useStyles from "./styles";
 import { useRadio, useRadioGroup, HStack, Box } from "@chakra-ui/react";
 
-export default function Header({ setCoordinates }) {
+export default function Header({ setCoordinates, setType, type }) {
   const classes = useStyles();
   const [autocomplete, setAutocomplete] = useState();
   const onLoad = (autocom) => setAutocomplete(autocom);
@@ -50,8 +50,8 @@ export default function Header({ setCoordinates }) {
   const options = ["restaurants", "hotels", "attractions"];
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
-    defaultValue: "restaurants",
-    onChange: console.log,
+    defaultValue: { type },
+    onChange: (e) => setType(e),
   });
 
   const group = getRootProps();
