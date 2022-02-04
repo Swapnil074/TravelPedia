@@ -10,7 +10,7 @@ import {
 } from "@material-ui/core";
 import useStyles from "./styles";
 import PlaceDetails from "../PlaceDetails/PlaceDetails";
-import { useRadio, useRadioGroup, HStack, Box } from "@chakra-ui/react";
+import { useRadio, useRadioGroup, HStack, Box, Stack } from "@chakra-ui/react";
 import StarIcon from "@material-ui/icons/Star";
 
 export default function List({
@@ -54,11 +54,11 @@ export default function List({
     );
   };
 
-  const options = ["all", "3+", "4+", "5+"];
+  const options = ["0", "3", "4", "5"];
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: "framework",
-    defaultValue: "all",
-    onChange: console.log,
+    defaultValue: "0",
+    onChange: (e) => setRating(e),
   });
 
   const group = getRootProps();
@@ -90,7 +90,10 @@ export default function List({
             const radio = getRadioProps({ value });
             return (
               <RadioCard key={value} {...radio}>
-                {value}
+                <Stack isInline>
+                  <StarIcon fontSize="medium" style={{ fill: "#FFD233" }} />
+                  <Typography variant="h6">{value}+</Typography>
+                </Stack>
               </RadioCard>
             );
           })}
@@ -109,7 +112,8 @@ export default function List({
               fontWeight: "bold",
             }}
           >
-            {places.length} results
+            {" "}
+            results
           </Typography>
           <Grid container spacing={3} className={classes.list}>
             {places?.map((place, i) => (

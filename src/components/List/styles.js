@@ -28,9 +28,8 @@ export default makeStyles((theme) => ({
     backgroundColor: "#FFFFFF",
     color: "#000000",
     borderRadius: "15px",
-    margin: theme.spacing(1, 2, 1),
+    margin: theme.spacing(1, 0.5, 1),
     fontSize: "18px",
-    flexDirection: "row",
   },
   marginBottom: {
     marginBottom: "30px",
