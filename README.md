@@ -1,13 +1,13 @@
 <h1 align="center">TravelPedia</h1>
 
-<p align="center">A web application built using reactjs to search nearby hotels, restaurants and attractions</p>
+<p align="center">A web application built to search nearby hotels, restaurants and attractions</p>
 
 
 ## Links
 
 - [Repo](https://github.com/Swapnil074/TravelPedia "TravelPedia Repo")
-
 - [Live](https://travelpedia.netlify.app/ "Live View")
+- [Figma Design](https://www.figma.com/file/ifQC2SPjiIrFUSWCOLaLDG/TravelPedia "UI Design")
 
 
 
