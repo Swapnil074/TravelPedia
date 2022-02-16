@@ -13,7 +13,7 @@
 
 ## Screenshots
 
-![UI Design](https://user-images.githubusercontent.com/53442514/154289894-a0dc3542-e60a-4afb-9efa-9fe851b36af9.jpg)
+![UI Design](https://user-images.githubusercontent.com/53442514/154289894-a0dc3542-e60a-4afb-9efa-9fe851b36af9.jpg "UI Design")
 
 ![Home Page-1](https://user-images.githubusercontent.com/53442514/154286665-34cbf149-13df-4e34-935a-1c914f9234ac.png "Home Page-1")
 ![Home Page-2](https://user-images.githubusercontent.com/53442514/154286811-514bf404-98a3-4029-ad61-aab4b9e89005.png "Home Page-2")
