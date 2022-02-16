@@ -2,6 +2,12 @@
 
 <p align="center">A web application built to search nearby hotels, restaurants and attractions</p>
 
+## Built With
+
+- ReactJS
+- NodeJS
+- Material UI
+- Chakra UI
 
 ## Links
 
@@ -52,13 +58,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Built With
-
-- ReactJS
-- NodeJS
-- Material UI
-- Chakra UI
-- 
 
 ## Author
 
