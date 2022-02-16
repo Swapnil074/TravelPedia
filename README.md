@@ -6,7 +6,7 @@
 
 - [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
 
-- [Live](<Homepage url> "Live View")
+- [Live](https://travelpedia.netlify.app/ "Live View")
 
 - [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
 
