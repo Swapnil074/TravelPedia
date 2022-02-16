@@ -14,7 +14,7 @@
 
 ## Screenshots
 
-![Home Page](/screenshot![Screenshot from 2022-02-16 20-02-41](https://user-images.githubusercontent.com/53442514/154286665-34cbf149-13df-4e34-935a-1c914f9234ac.png "Home Page")
+![Home Page](https://user-images.githubusercontent.com/53442514/154286665-34cbf149-13df-4e34-935a-1c914f9234ac.png "Home Page")
 ![Screenshot from 2022-02-16 20-03-17](https://user-images.githubusercontent.com/53442514/154286811-514bf404-98a3-4029-ad61-aab4b9e89005.png)
 ![Screenshot from 2022-02-16 20-04-27](https://user-images.githubusercontent.com/53442514/154286840-32bd959d-bc66-49bf-8e5f-c20bf59bdb20.png)
 
