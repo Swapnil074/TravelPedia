@@ -2,15 +2,14 @@
 
 <p align="center">A web application built using reactjs to search nearby hotels, restaurants and attractions</p>
 
+
 ## Links
 
-- [Repo](https://github.com/Rohit19060/<project-name> "<project-name> Repo")
+- [Repo](https://github.com/Swapnil074/TravelPedia "TravelPedia Repo")
 
 - [Live](https://travelpedia.netlify.app/ "Live View")
 
-- [Bugs](https://github.com/Rohit19060/<project-name>/issues "Issues Page")
 
-- [API](<API Link> "API")
 
 ## Screenshots
 
@@ -20,53 +19,52 @@
 
 
 
-## Available Commands
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start" : "react-scripts start"`,
+### `npm start`
 
-The app is built using `create-react-app` so this command Runs the app in Development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. You also need to run the server file as well to completely run the app. The page will reload if you make edits.
-You will also see any lint errors in the console.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `"npm run build": "react-scripts build"`,
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app will be ready to deploy!
+### `npm test`
 
-### `"npm run test": "react-scripts test"`,
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Launches the test runner in the interactive watch mode.
+### `npm run build`
 
-### `"npm run dev": "concurrently "nodemon server" "npm run start"`,
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-For running the server and app together I am using concurrently this helps a lot in the MERN application as it runs both the server (client and server) concurrently. So you can work on them both together.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### `"serve": "node server"`
-
-For running the server file on you can use this command.
-
-### `npm run serve`
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Built With
 
-- JavaScript
-- Node
-- NPM
-- Webpack
-- HTML
-- CSS
-
-## Future Updates
-
-- [ ] Reliable Storage
+- ReactJS
+- NodeJS
+- Material UI
+- Chakra UI
+- 
 
 ## Author
 
-**Rohit Jain**
+**Swapnil Sinha**
 
-- [Profile](https://github.com/rohit19060 "Rohit jain")
-- [Email](mailto:rohitjain19060@gmail.com?subject=Hi "Hi!")
-- [Website](https://kingtechnologies.in "Welcome")
+- [LinkedIn](https://www.linkedin.com/in/swapnil-sinha-2b038a199 "Swapnil Sinha")
+- [Email](mailto:mailswapnil0074@gmail.com?subject=Hi "Hi!")
+
 
 ## 🤝 Support
 
