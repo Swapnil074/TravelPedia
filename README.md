@@ -1,4 +1,4 @@
-<h1 align="center"><project-name></h1>
+<h1 align="center">TravelPedia</h1>
 
 <p align="center"><project-description></p>
 
